@@ -5,17 +5,17 @@ import Navbar from "../Navbar/Navbar";
 
 const MainLayout = () => {
   return (
-    <div>
-      <Navbar />
+    <div className="flex flex-col main-wrapper">
+      <Navbar className="main-wrappe" />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="pt-20"
+        className="pt-20 flex-1 main-wrapper min-h-screen"
       >
         <Outlet />
       </motion.div>
     </div>
-  )
+  );
 };
 
 export default MainLayout;

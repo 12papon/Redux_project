@@ -2,9 +2,9 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div>
+    <section>
       <h1 className="text-black">Home</h1>
-    </div>
+    </section>
   );
 };
 

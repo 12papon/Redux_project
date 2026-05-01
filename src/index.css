@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+@layer base {
+  body {
+  }
+}
+@layer components {
+  .main-wrapper {
+    @apply max-w-[1200px] mx-auto w-full;
+  }
+}
+
+@layer utilities {
+}
