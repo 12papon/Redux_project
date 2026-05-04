@@ -17,7 +17,7 @@ const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true); // লগইন স্টেট (টেস্ট করার জন্য true/false করুন)
 
   const menuItems = [
-    { name: "Home", href: "home" },
+    { name: "Home", href: "/" },
     { name: "Products", href: "products" },
     { name: "Services", href: "services" },
     { name: "Contact", href: "contact" },
@@ -38,8 +38,6 @@ const Header = () => {
               <NavLink
                 key={item.name}
                 to={item.href}
-                end
-                state={{ name: "rayhan" }}
                 className={({ isActive }) =>
                   isActive
                     ? "text-blue-600 font-medium"
@@ -55,10 +53,15 @@ const Header = () => {
           <div className="hidden md:flex items-center">
             {!isLoggedIn ? (
               <div className="flex items-center space-x-4">
-                <button className="text-gray-600 font-medium">Login</button>
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                <Link to="/login" className="text-gray-600 font-medium">
+                  Login
+                </Link>
+                <Link
+                  to="/signup"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+                >
                   Sign Up
-                </button>
+                </Link>
               </div>
             ) : (
               <div className="relative">
